@@ -1,15 +1,14 @@
 一个基于 FastAPI 的轻量级大模型调用服务，提供统一的 API 接口来调用 LLM。
 
 ## 项目结构
-
+```
 ├── run.py              # FastAPI 主入口，定义 /ai_call 接口
 ├── ai_request.py       # Pydantic 请求体模型
 ├── llm_api.py          # LLM API 调用封装
 ├── logger_config.py    # 日志配置
 ├── requirements.txt    # 依赖清单
 └── venv/               # 虚拟环境（不上传）
-
-
+```
 
 ## 快速开始
 
@@ -44,8 +43,6 @@ python run.py
 
 curl.exe -X POST http://127.0.0.1:8000/ai_call -H "Content-Type: application/json" -d "{\"prompt\": \"你好\"}"
 返回示例：
-
-
 {"code": 200, "message": "你好！有什么我可以帮忙的吗？"}
 接口说明
 项目	说明
