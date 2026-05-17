@@ -1,3 +1,4 @@
+import os
 import re
 import logging
 from openai import OpenAI
@@ -9,7 +10,7 @@ adapter = CustomAdapter(logger, {})
 
 # 创建 OpenAI 客户端，指向 deepseek 的接口
 client = OpenAI(
-    api_key="sk-82d487a06efd4346a836cc91cf60d0d3",   # ← 去 https://platform.deepseek.com 注册获取
+    api_key=os.getenv("DEEPSEEK_API_KEY"),   # ← 去 https://platform.deepseek.com 注册获取
     base_url="https://api.deepseek.com"
 )
 
